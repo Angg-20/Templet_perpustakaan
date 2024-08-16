@@ -1,0 +1,45 @@
+body{
+    overflow-x: hidden;
+}
+
+.menu {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 340px;
+    height: calc(100vh - 50px);
+    background-color: #111111;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    transform: translateX(0);
+    overflow-x: hidden;
+}
+
+.menu.collapsed {
+    transform: translateX(-340px);
+}
+
+.content-wrapper {
+    padding-top: 70px;
+    padding-left: 340px;
+    transition: padding-left 0.3s ease;
+}
+
+.menu.collapsed~.content-wrapper {
+    padding-left: 0;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        width: 250px;
+    }
+
+    .menu.collapsed {
+        transform: translateX(-250px);
+    }
+
+    .content-wrapper {
+        padding-left: 250px;
+    }
+}
+
