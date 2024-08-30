@@ -5,155 +5,144 @@
 @endsection
 
 @section('Konten')
-    <h1>Peminjaman Buku Perhari</h1>
-    <nav>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">Laporan</li>
-            <li class="breadcrumb-item active">Peminjaman Buku Perhari</li>
-        </ol>
-    </nav>
-    </div>
+    <div class="container-fluid dashboard-container">
+        <div class="bg-blue-top p-3 mb-4 rounded">
+            <h1 class="mb-3 text-gray-800">Peminjaman Buku Perhari</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">Laporan</li>
+                    <li class="breadcrumb-item active text-gray-400" aria-current="page">Peminjaman Buku Perhari</li>
+                </ol>
+            </nav>
+        </div>
 
-    <div class="row">
-        <div class="col-lg-4 mb-3">
-            <div class="card card-custom bg-blue text-center">
-                <div class="card-body">
-                    <h1 class="card-title-custom">43</h1>
-                    <h6 class="card-subtitle-custom">Fiksi</h6>
+        <div class="row g-4 mb-4">
+            <div class="col-lg-4">
+                <div class="card card-custom bg-pastel-blue text-center">
+                    <div class="card-body">
+                        <h2 class="card-title-custom">43</h2>
+                        <h6 class="card-subtitle-custom">Fiksi</h6>
+                    </div>
                 </div>
-                <div class="card-footer card-footer-custom footer-blue"></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-custom bg-pastel-green text-center">
+                    <div class="card-body">
+                        <h2 class="card-title-custom">10</h2>
+                        <h6 class="card-subtitle-custom">Non-Fiksi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-custom bg-pastel-yellow text-center">
+                    <div class="card-body">
+                        <h2 class="card-title-custom">7</h2>
+                        <h6 class="card-subtitle-custom">Ensiklopedia</h6>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4 mb-3">
-            <div class="card card-custom bg-dark-blue text-center">
-                <div class="card-body">
-                    <h1 class="card-title-custom">10</h1>
-                    <h6 class="card-subtitle-custom">Non-Fiksi</h6>
+
+        <div class="row g-4 mb-4">
+            <div class="col-lg-4">
+                <div class="card card-custom bg-pastel-pink text-center">
+                    <div class="card-body">
+                        <h2 class="card-title-custom">2</h2>
+                        <h6 class="card-subtitle-custom">Biografi</h6>
+                    </div>
                 </div>
-                <div class="card-footer card-footer-custom footer-dark-blue"></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-custom bg-pastel-purple text-center">
+                    <div class="card-body">
+                        <h2 class="card-title-custom">10</h2>
+                        <h6 class="card-subtitle-custom">Komik</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-custom bg-pastel-orange text-center">
+                    <div class="card-body">
+                        <h2 class="card-title-custom">1</h2>
+                        <h6 class="card-subtitle-custom">Majalah</h6>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4 mb-3">
-            <div class="card card-custom bg-orange text-center">
-                <div class="card-body">
-                    <h1 class="card-title-custom">7</h1>
-                    <h6 class="card-subtitle-custom">Ensiklopedia</h6>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Diagram Peminjaman Buku <span>/ Hari Ini</span></h5>
+
+                        <div id="peminjamanChart"></div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                new ApexCharts(document.querySelector("#peminjamanChart"), {
+                                    series: [{
+                                        name: 'Jumlah Peminjaman',
+                                        data: [43, 10, 7, 2, 10, 1]
+                                    }],
+                                    chart: {
+                                        type: 'pie',
+                                        height: 350
+                                    },
+                                    labels: ['Fiksi', 'Non-Fiksi', 'Ensiklopedia', 'Biografi', 'Komik', 'Majalah'],
+                                    colors: ['#A7C7E7', '#C1E1C1', '#FFEFD5', '#FFB6C1', '#E6E6FA', '#FFE5B4'],
+                                    fill: {
+                                        type: 'gradient',
+                                        gradient: {
+                                            shade: 'light',
+                                            type: "vertical",
+                                            shadeIntensity: 0.5,
+                                            gradientToColors: ['#4682B4', '#228B22', '#FFA500', '#FF69B4', '#9370DB', '#FFA07A'],
+                                            inverseColors: true,
+                                            opacityFrom: 1,
+                                            opacityTo: 1,
+                                            stops: [0, 100]
+                                        }
+                                    },
+                                    title: {
+                                        text: 'Peminjaman Buku per Kategori',
+                                        align: 'center',
+                                        style: {
+                                            fontSize: '18px'
+                                        }
+                                    },
+                                    responsive: [{
+                                        breakpoint: 480,
+                                        options: {
+                                            chart: {
+                                                width: 200
+                                            },
+                                            legend: {
+                                                position: 'bottom'
+                                            }
+                                        }
+                                    }],
+                                    plotOptions: {
+                                        pie: {
+                                            dataLabels: {
+                                                offset: -5
+                                            }
+                                        }
+                                    },
+                                    dataLabels: {
+                                        formatter(val, opts) {
+                                            const name = opts.w.globals.labels[opts.seriesIndex]
+                                            return [name, val.toFixed(1) + '%']
+                                        }
+                                    },
+                                    legend: {
+                                        show: false
+                                    }
+                                }).render();
+                            });
+                        </script>
+                    </div>
                 </div>
-                <div class="card-footer card-footer-custom footer-orange"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-4 mb-3">
-            <div class="card card-custom bg-green text-center">
-                <div class="card-body">
-                    <h1 class="card-title-custom">2</h1>
-                    <h6 class="card-subtitle-custom">Biografi</h6>
-                </div>
-                <div class="card-footer card-footer-custom footer-green"></div>
-            </div>
-        </div>
-        <div class="col-lg-4 mb-3">
-            <div class="card card-custom bg-purple text-center">
-                <div class="card-body">
-                    <h1 class="card-title-custom">10</h1>
-                    <h6 class="card-subtitle-custom">Komik</h6>
-                </div>
-                <div class="card-footer card-footer-custom footer-purple"></div>
-            </div>
-        </div>
-        <div class="col-lg-4 mb-3">
-            <div class="card card-custom bg-red text-center">
-                <div class="card-body">
-                    <h1 class="card-title-custom">1</h1>
-                    <h6 class="card-subtitle-custom">Majalah</h6>
-                </div>
-                <div class="card-footer card-footer-custom footer-red"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 mt-4">
-        <div class="card">
-
-            <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                        <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                </ul>
-            </div>
-
-            <div class="card-body">
-                <h5 class="card-title">Reports <span>/Today</span></h5>
-
-                <!-- Line Chart -->
-                <div id="reportsChart"></div>
-
-                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                        new ApexCharts(document.querySelector("#reportsChart"), {
-                            series: [{
-                                name: 'Sales',
-                                data: [31, 40, 28, 51, 42, 82, 56],
-                            }, {
-                                name: 'Revenue',
-                                data: [11, 32, 45, 32, 34, 52, 41]
-                            }, {
-                                name: 'Customers',
-                                data: [15, 11, 32, 18, 9, 24, 11]
-                            }],
-                            chart: {
-                                height: 350,
-                                type: 'area',
-                                toolbar: {
-                                    show: false
-                                },
-                            },
-                            markers: {
-                                size: 4
-                            },
-                            colors: ['#4154f1', '#2eca6a', '#ff771d'],
-                            fill: {
-                                type: "gradient",
-                                gradient: {
-                                    shadeIntensity: 1,
-                                    opacityFrom: 0.3,
-                                    opacityTo: 0.4,
-                                    stops: [0, 90, 100]
-                                }
-                            },
-                            dataLabels: {
-                                enabled: false
-                            },
-                            stroke: {
-                                curve: 'smooth',
-                                width: 2
-                            },
-                            xaxis: {
-                                type: 'datetime',
-                                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z",
-                                    "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z",
-                                    "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z",
-                                    "2018-09-19T06:30:00.000Z"
-                                ]
-                            },
-                            tooltip: {
-                                x: {
-                                    format: 'dd/MM/yy HH:mm'
-                                },
-                            }
-                        }).render();
-                    });
-                </script>
-                <!-- End Line Chart -->
-
             </div>
         </div>
     </div>

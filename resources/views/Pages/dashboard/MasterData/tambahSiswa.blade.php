@@ -6,42 +6,43 @@
 
 @section('Konten')
     <div class="pagetitle">
-        <h1>DataSiswa</h1>
+        <h1>Data Siswa</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">MasterData</li>
-                <li class="breadcrumb-item">DataSiswa</li>
+                <li class="breadcrumb-item">Master Data</li>
+                <li class="breadcrumb-item">Data Siswa</li>
                 <li class="breadcrumb-item active">Tambah</li>
             </ol>
         </nav>
     </div>
 
     <div class="card">
-        <div class="m-3">
+        <div class="card-body">
             <form>
                 <div class="mb-3">
                     <label for="nisn" class="form-label">NISN</label>
-                    <input type="text" class="form-control" id="nisn" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="nisn" name="nisn">
                 </div>
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="nama">
+                    <input type="text" class="form-control" id="nama" name="nama">
                 </div>
                 <div class="mb-3">
-                    <label for="alamat" class="form-label">alamat</label>
-                    <textarea type="text" class="form-control" id="alamat"></textarea>
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea class="form-control" id="alamat" name="alamat" rows="3"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="No_telp" class="form-label">No Telpon</label>
-                    <input type="text" class="form-control" id="No_telp">
+                    <label for="no_telp" class="form-label">No. Telepon</label>
+                    <input type="tel" class="form-control" id="no_telp" name="no_telp">
                 </div>
                 <div class="mb-3">
                     <label for="kode_kelas" class="form-label">Kode Kelas</label>
-                    <input type="text" class="form-control" id="kode_kelas">
+                    <input type="text" class="form-control" id="kode_kelas" name="kode_kelas">
                 </div>
-                <button type="submit" class="btn btn-primary mt-4" style="width: 150px">Submit</button>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary" style="width: 150px">Submit</button>
+                </div>
             </form>
         </div>
     </div>
-    <script src="/assets/Bootstrap-js/main.js"></script>
 @endsection

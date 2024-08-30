@@ -15,39 +15,33 @@
         </nav>
     </div>
 
-    <div class="row">
-        <div class="col-lg-6">
-
-        </div>
-        <div class="col-lg-6">
-
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-light">
+                        <tr class="text-center">
+                            <th scope="col">#</th>
+                            <th scope="col">NIS</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Alamat</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-center">1</th>
+                            <td>222307003</td>
+                            <td>Braga Dwi Anggara</td>
+                            <td>Campaka</td>
+                            <td class="text-center">
+                                <a href="#" class="btn btn-sm btn-success me-2">Edit</a>
+                                <a href="#" class="btn btn-sm btn-danger">Hapus</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nis</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Alamat</th>
-                <th scope="col" class="text-center">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>222307003</td>
-                <td>Braga Dwi Anggara</td>
-                <td>Campaka</td>
-                <td class="text-center">
-                    <a href="" class="btn btn-success" style="width: 100px">Edit</a>
-                    <a href="" class="btn btn-danger" style="width: 100px">Hapus</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    <script src="/assets/Bootstrap-js/main.js"></script>
 @endsection

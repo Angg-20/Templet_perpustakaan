@@ -13,72 +13,40 @@
         </ol>
     </nav>
 
-
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="card" style="width: 600px;">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="/assets/img/kucing.jpeg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="card-body">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil hic
-                                    odit, consectetur doloremque aliquam consequuntur perspiciatis exercitationem dicta
-                                    excepturi aspernatur.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card" style="width: 600px;">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="/assets/img/kucing.jpeg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="card-body">
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-                                    consequatur expedita commodi officia praesentium totam in aut exercitationem doloremque
-                                    ullam.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <div class="card" style="width: 600px;">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="/assets/img/kucing.jpeg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="card-body">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil hic
-                                    odit, consectetur doloremque aliquam consequuntur perspiciatis exercitationem dicta
-                                    excepturi aspernatur.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card" style="width: 600px;">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="/assets/img/kucing.jpeg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="card-body">
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-                                    consequatur expedita commodi officia praesentium totam in aut exercitationem doloremque
-                                    ullam.</p>
-                            </div>
-                        </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Daftar Buku Belum Kembali</h5>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Judul Buku</th>
+                                    <th>Peminjam</th>
+                                    <th>Tanggal Pinjam</th>
+                                    <th>Batas Pengembalian</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>100 Dongeng Nusantara</td>
+                                    <td>John Doe</td>
+                                    <td>01-06-2023</td>
+                                    <td>08-06-2023</td>
+                                    <td><span class="badge bg-warning">Terlambat</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Laskar Pelangi</td>
+                                    <td>Jane Smith</td>
+                                    <td>05-06-2023</td>
+                                    <td>12-06-2023</td>
+                                    <td><span class="badge bg-info">Masih Dipinjam</span></td>
+                                </tr>
+                                <!-- Tambahkan baris lain sesuai kebutuhan -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

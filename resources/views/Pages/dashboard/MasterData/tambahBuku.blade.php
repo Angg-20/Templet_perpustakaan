@@ -6,38 +6,39 @@
 
 @section('Konten')
     <div class="pagetitle">
-        <h1>DataBuku</h1>
+        <h1>Data Buku</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">MasterData</li>
-                <li class="breadcrumb-item">DataBuku</li>
+                <li class="breadcrumb-item">Master Data</li>
+                <li class="breadcrumb-item">Data Buku</li>
                 <li class="breadcrumb-item active">Tambah</li>
             </ol>
         </nav>
     </div>
 
     <div class="card">
-        <div class="m-3">
+        <div class="card-body">
             <form>
                 <div class="mb-3">
-                    <label for="kode_buku" class="form-label">kode buku</label>
-                    <input type="text" class="form-control" id="kode_buku" aria-describedby="emailHelp">
+                    <label for="kode_buku" class="form-label">Kode Buku</label>
+                    <input type="text" class="form-control" id="kode_buku" name="kode_buku">
                 </div>
                 <div class="mb-3">
-                    <label for="judul" class="form-label">judul</label>
-                    <input type="text" class="form-control" id="judul">
+                    <label for="judul" class="form-label">Judul</label>
+                    <input type="text" class="form-control" id="judul" name="judul">
                 </div>
                 <div class="mb-3">
-                    <label for="penerbit" class="form-label">penerbit</label>
-                    <textarea type="text" class="form-control" id="penerbit"></textarea>
+                    <label for="penerbit" class="form-label">Penerbit</label>
+                    <input type="text" class="form-control" id="penerbit" name="penerbit">
                 </div>
                 <div class="mb-3">
-                    <label for="tahun terbit" class="form-label">Tahun Terbit</label>
-                    <input type="text" class="form-control" id="tahun terbit">
+                    <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
+                    <input type="number" class="form-control" id="tahun_terbit" name="tahun_terbit">
                 </div>
-                <button type="submit" class="btn btn-primary mt-4" style="width: 150px">Submit</button>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary" style="width: 150px">Submit</button>
+                </div>
             </form>
         </div>
     </div>
-    <script src="/assets/Bootstrap-js/main.js"></script>
 @endsection
